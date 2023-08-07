@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+body {
+    font-family: 'Montserrat';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: var(--Light-Grayish-Blue);
+}
+
+:root {
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+
+    --Linear-Gradient: linear-gradient(hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+
+    --font-size: 1rem;
+
+    --font-weight: 700;
+}
+
+main {
+    width: 20rem;
+    top: 20%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    text-align: center;
+}
+
+.top {
+    position: absolute;
+    z-index: -1;
+    top: -5rem;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    gap: var(--font-size);
+    justify-content: center;
+}
+
+.container {
+    padding: var(--font-size);
+    color: var(--Dark-Grayish-Blue);
+}
+
+.btn {
+    padding: 0;
+    border: 0;
+    border-radius: var(--font-size);
+}
+
+.toggle_button {
+    width: 4rem;
+    height: 2rem;
+    background: var(--Linear-Gradient);
+    border-radius: var(--font-size);
+    position: relative;
+    padding: 0 3px;
+    cursor: pointer;
+}
+
+.toggle_button:hover,
+.toggle_button:focus-within {
+    background: var(--Grayish-Blue);
+}
+
+.circle {
+    transition: all 250ms;
+    border-radius: 50%;
+    background: var(--Very-Light-Grayish-Blue);
+    width: 1.6rem;
+    position: absolute;
+    height: 1.6rem;
+    top: 3px;
+    left: 4px;
+}
+
+.ctn {
+    display: grid;
+    gap: var(--font-size);
+}
+
+.anuall,
+.monthly {
+    font-size: calc(var(--font-size) * 3);
+}
+
+@keyframes grow { from { scale: 0; } to { scale: 1; } }
+.grow { animation: grow 280ms; }
+@keyframes shrink { from { scale: 1; } to { scale: 0; } }
+.shrink { animation: shrink 280ms; }
+
+.monthly {
+    display: none;
+}
+
+.price {
+    align-items: center;
+    display: flex;
+    height: 4rem;
+    gap: .2rem;
+    justify-content: center;
+}
+
+span {
+    font-size: calc(var(--font-size) * 2);
+}
+
+.text_ctn {
+    position: relative;
+    padding: 1rem;
+}
+
+.text_ctn p {
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+    margin: 0 1rem ;
+    padding: var(--font-size);
+}
+
+.text_ctn p:first-child,
+.text_ctn p:nth-child(2) {
+    border-bottom: none;
+}
+
+.basic_ctn,
+.master_ctn {
+    background: var(--Very-Light-Grayish-Blue);
+    border-radius: 5px;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.professional_ctn {
+    border-radius: 5px;
+    background: var(--Linear-Gradient);
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.professional_ctn .text_ctn p:first-child,
+.professional_ctn .text_ctn p:nth-child(2) {
+    border-bottom: none;
+}
+
+.learn_more {
+    margin: 2rem 0;
+    padding: .8rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 5px;
+    background: var(--Linear-Gradient);
+    font-family: inherit;
+    text-transform: uppercase;
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.professional_ctn .learn_more {
+    background: var(--Very-Light-Grayish-Blue);
+    color: var(--Dark-Grayish-Blue);
+}
+
+.learn_more:hover,
+.learn_more:focus-within {
+    color: var(--Linear-Gradient);
+    background: var(--Very-Light-Grayish-Blue);
+}
+
+.professional_ctn .learn_more:hover,
+.professional_ctn .learn_more:focus-within {
+    background: var(--Linear-Gradient);
+    color: var(--Very-Light-Grayish-Blue);
+}
+
+.bottom {
+    position: absolute;
+    z-index: -1;
+    display: none;
+}
+
+@media screen and (min-width: 375px) {
+
+    main {
+        width: 70rem;
+        top: 30%;
+    }
+
+    .top {
+        right: -10rem;
+        top: -13rem;
+        height: 50rem;
+    }
+
+    .bottom {
+        display: block;
+        bottom: -10rem;
+        left: -10rem;
+    }
+
+    .ctn {
+        grid-template-columns: repeat(3, 1fr);
+        gap: var(--font-size);
+        align-items: center;
+    }
+
+    .professional_ctn {
+        height: 30rem;
+    }
+
+    h2 {
+        font-size: var(--font-size);
+        padding: var(--font-size);
+    }
+
+    .price {
+        scale: 1.2;
+    }
+}
+
+
+
+
+
+
+

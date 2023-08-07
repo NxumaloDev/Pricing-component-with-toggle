@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | [Mandlakazi Nxumalo]</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <img src="./images/bg-top.svg" class="top" alt="">
+  <div class="container">
+    <h1>Our Pricing</h1>
+    <div class="flex">
+      <p>Annually</p>
+      <button class="btn" onclick="myFunc()">
+        <div class="toggle_button">
+        <div class="circle"></div>
+      </div>
+    </button>
+    <p>Monthly</p>
+    </div>
+  </div>
+
+  <div class="ctn">
+    <div class="basic_ctn">
+      <h2>Basic</h2>
+      <div class="price">
+        <span>&dollar;</span>
+        <p class="anuall">199.99</p>
+        <p class="monthly">19.99</p>
+      </div>
+      <div class="text_ctn">
+        <p>500 GB Storage</p>
+        <p>2 Users Allowed</p>
+        <p>Send up to 3 GB</p>
+        <button class="learn_more">Learn More</button>
+      </div>
+  </div>
+  
+  <div class="professional_ctn">
+  <h2>Professional</h2>
+  <div class="price">
+    <span>&dollar;</span>
+    <p class="anuall">249.99</p>
+    <p class="monthly">24.99</p>
+  </div>
+  <div class="text_ctn">
+  <p>1 TB Storage</p>
+  <p>5 Users Allowed</p>
+  <p>Send up to 10 GB</p>
+  <button class="learn_more">Learn More</button>
+  </div>
+  </div>
+
+  <div class="master_ctn">
+  <h2>Master</h2>
+  <div class="price">
+    <span>&dollar;</span>
+    <p class="anuall">399.99</p>
+    <p class="monthly">39.99</p>
+  </div>
+  <div class="text_ctn">
+  <p>2 TB Storage</p>
+  <p>10 Users Allowed</p>
+  <p>Send up to 20 GB</p>
+  <button class="learn_more">Learn More</button>
+  </div>
+  </div>
+</div>
+<img src="./images/bg-bottom.svg" class="bottom" alt="">
+</main>
+
+<script>
+  let btn = document.querySelector(".toggle_button");
+  let circle = document.querySelector(".circle");
+  let anuall = document.querySelectorAll(".anuall")
+  let monthly = document.querySelectorAll(".monthly")
+ 
+function myFunc(){
+    circle.style.left === "4px";
+    monthly[0].style.display === "none"
+    monthly[1].style.display === "none"
+    monthly[2].style.display === "none"
+
+    if (circle.style.left === "4px"){
+      circle.style.left = "38px";
+
+      anuall[0].style.display = "none"
+      anuall[0].classList.add("shrink")
+
+      anuall[1].style.display = "none"
+      anuall[1].classList.add("shrink")
+
+      anuall[2].style.display = "none"
+      anuall[2].classList.add("shrink")
+
+        monthly[0].style.display = "block"
+        monthly[0].classList.add("grow")
+
+        monthly[1].style.display = "block"
+        monthly[1].classList.add("grow")
+        
+        monthly[2].style.display = "block"
+        monthly[2].classList.add("grow")
+      }
+      else {
+        circle.style.left = "4px"
+
+        monthly[0].style.display = "none"
+        monthly[0].classList.add("shrink")
+
+        monthly[1].style.display = "none"
+        monthly[1].classList.add("shrink")
+
+        monthly[2].style.display = "none"
+        monthly[2].classList.add("shrink")
+
+        anuall[0].style.display = "block"
+        anuall[0].classList.add("grow")
+
+        anuall[1].style.display = "block"
+        anuall[1].classList.add("grow")
+
+        anuall[2].style.display = "block"
+        anuall[2].classList.add("grow")
+      }
+}
+</script>
+</body>
+</html>
